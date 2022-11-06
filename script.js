@@ -8,19 +8,19 @@ let computerAnswer = '';
 let confirmToPlay = true;
 const arrayOfAnswers = ['rock', 'scissors', 'paper'];
 
-while(confirmToPlay === true){
+while( confirmToPlay === true ){
   userScore = 0;
   computerScore = 0;
   let userName = prompt("Please, enter your name : ");
 
-  if(userName === null || userName === ''){
+  if( userName === null || userName === '' ){
     userName = 'User';
   }
 
-  while(userScore < count && computerScore < count ){
+  while( userScore < count && computerScore < count ){
     userAnswer = prompt("Rock, Scissors, Paper...Please make your move : ");
   
-    if(userAnswer === null){
+    if( userAnswer === null ){
       alert("You aborted this game. To start new game just refresh the page.");
     }
   
@@ -32,10 +32,10 @@ while(confirmToPlay === true){
     
       alert("Computer move is : " + computerAnswer);
     
-      if((computerAnswer === 'rock' && userAnswer === 'scissors') || (computerAnswer === 'scissors' && userAnswer === 'paper') || (computerAnswer === 'paper' && userAnswer === 'rock')){
+      if(( computerAnswer === 'rock' && userAnswer === 'scissors' ) || ( computerAnswer === 'scissors' && userAnswer === 'paper' ) || ( computerAnswer === 'paper' && userAnswer === 'rock' )){
         computerScore += 1;
         alert( "Computer won this round. Current count is " + userName + " " + userScore + " : Computer " + computerScore  );
-      }else if(computerAnswer === userAnswer){
+      }else if( computerAnswer === userAnswer ){
       }else{
         userScore += 1;  
         alert( userName + " won this round. Current count is " + userName + " " + userScore + " : Computer " + computerScore );
@@ -43,7 +43,7 @@ while(confirmToPlay === true){
     } 
   }
   
-  if(computerScore > userScore){
+  if( computerScore > userScore ){
     alert( "Sorry. Computer won this game. Count -  You " + userName + " " + userScore + " : Computer " + computerScore  );
   }else{
     alert( "Congratulations. You won this game. Count -  You " + userName + " " + userScore + " : Computer " + computerScore  );
@@ -51,3 +51,4 @@ while(confirmToPlay === true){
   
   confirmToPlay = confirm("Do you want to start new game?")
 }
+
